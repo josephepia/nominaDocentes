@@ -1,0 +1,2 @@
+class AspiringTeachingCategory < ApplicationRecord
+end

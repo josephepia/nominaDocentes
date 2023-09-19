@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Researcher categories</h1>
+
+<div id="researcher_categories">
+  <% @researcher_categories.each do |researcher_category| %>
+    <%= render researcher_category %>
+    <p>
+      <%= link_to "Show this researcher category", researcher_category %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New researcher category", new_researcher_category_path %>

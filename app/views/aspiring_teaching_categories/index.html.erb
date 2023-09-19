@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Aspiring teaching categories</h1>
+
+<div id="aspiring_teaching_categories">
+  <% @aspiring_teaching_categories.each do |aspiring_teaching_category| %>
+    <%= render aspiring_teaching_category %>
+    <p>
+      <%= link_to "Show this aspiring teaching category", aspiring_teaching_category %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New aspiring teaching category", new_aspiring_teaching_category_path %>

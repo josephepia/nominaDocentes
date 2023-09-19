@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @contracted_teaching_category %>
+
+<div>
+  <%= link_to "Edit this contracted teaching category", edit_contracted_teaching_category_path(@contracted_teaching_category) %> |
+  <%= link_to "Back to contracted teaching categories", contracted_teaching_categories_path %>
+
+  <%= button_to "Destroy this contracted teaching category", @contracted_teaching_category, method: :delete %>
+</div>

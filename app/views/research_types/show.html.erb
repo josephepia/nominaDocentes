@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @research_type %>
+
+<div>
+  <%= link_to "Edit this research type", edit_research_type_path(@research_type) %> |
+  <%= link_to "Back to research types", research_types_path %>
+
+  <%= button_to "Destroy this research type", @research_type, method: :delete %>
+</div>

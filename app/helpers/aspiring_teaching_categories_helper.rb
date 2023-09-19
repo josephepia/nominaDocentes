@@ -1,0 +1,2 @@
+module AspiringTeachingCategoriesHelper
+end

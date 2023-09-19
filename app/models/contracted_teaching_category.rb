@@ -1,0 +1,2 @@
+class ContractedTeachingCategory < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class ResearcherCategory < ApplicationRecord
+end

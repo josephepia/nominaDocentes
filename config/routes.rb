@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :research_types
+  resources :fees
+  resources :researcher_categories
+  resources :experiences
+  resources :contracted_teaching_categories
+  resources :aspiring_teaching_categories
   resources :patent_types
   resources :areas
   resources :resources

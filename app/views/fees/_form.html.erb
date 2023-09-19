@@ -1,0 +1,27 @@
+<%= form_with(model: fee) do |form| %>
+  <% if fee.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(fee.errors.count, "error") %> prohibited this fee from being saved:</h2>
+
+      <ul>
+        <% fee.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :descripcion, style: "display: block" %>
+    <%= form.text_field :descripcion %>
+  </div>
+
+  <div>
+    <%= form.label :valor, style: "display: block" %>
+    <%= form.text_field :valor %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

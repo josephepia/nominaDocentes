@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Contracted teaching categories</h1>
+
+<div id="contracted_teaching_categories">
+  <% @contracted_teaching_categories.each do |contracted_teaching_category| %>
+    <%= render contracted_teaching_category %>
+    <p>
+      <%= link_to "Show this contracted teaching category", contracted_teaching_category %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New contracted teaching category", new_contracted_teaching_category_path %>

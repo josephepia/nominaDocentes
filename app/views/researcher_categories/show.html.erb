@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @researcher_category %>
+
+<div>
+  <%= link_to "Edit this researcher category", edit_researcher_category_path(@researcher_category) %> |
+  <%= link_to "Back to researcher categories", researcher_categories_path %>
+
+  <%= button_to "Destroy this researcher category", @researcher_category, method: :delete %>
+</div>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @aspiring_teaching_category %>
+
+<div>
+  <%= link_to "Edit this aspiring teaching category", edit_aspiring_teaching_category_path(@aspiring_teaching_category) %> |
+  <%= link_to "Back to aspiring teaching categories", aspiring_teaching_categories_path %>
+
+  <%= button_to "Destroy this aspiring teaching category", @aspiring_teaching_category, method: :delete %>
+</div>

@@ -1,0 +1,27 @@
+<%= form_with(model: researcher_category) do |form| %>
+  <% if researcher_category.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(researcher_category.errors.count, "error") %> prohibited this researcher_category from being saved:</h2>
+
+      <ul>
+        <% researcher_category.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :descripcion, style: "display: block" %>
+    <%= form.text_field :descripcion %>
+  </div>
+
+  <div>
+    <%= form.label :puntaje, style: "display: block" %>
+    <%= form.number_field :puntaje %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

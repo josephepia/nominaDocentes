@@ -1,0 +1,1 @@
+json.partial! "contracted_teaching_categories/contracted_teaching_category", contracted_teaching_category: @contracted_teaching_category

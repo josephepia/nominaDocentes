@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nivel: MyString
+  puntaje: 1
+  bono: 1.5
+  semillero: false
+
+two:
+  nivel: MyString
+  puntaje: 1
+  bono: 1.5
+  semillero: false
