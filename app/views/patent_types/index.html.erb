@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Patent types</h1>
+
+<div id="patent_types">
+  <% @patent_types.each do |patent_type| %>
+    <%= render patent_type %>
+    <p>
+      <%= link_to "Show this patent type", patent_type %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New patent type", new_patent_type_path %>

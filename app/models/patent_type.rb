@@ -1,0 +1,2 @@
+class PatentType < ApplicationRecord
+end
