@@ -14,5 +14,8 @@
   <% end %>
  
 
-  <%= button_to "Destroy this permission", @permission, method: :delete %>
+
+  
+  <%= button_to "Destroy this permission", @permission, method: :delete , form_class: "waves-effect waves-light btn"%>
+  <%= link_to  "Eliminar este permiso", "/permissions/#{@permission.id}",  method: :delete, class: "waves-effect waves-light btn" %>
 </div>
