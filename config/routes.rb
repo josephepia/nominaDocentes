@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :degree_types
+  resources :vacants
   resources :research_types
   resources :fees
   resources :researcher_categories

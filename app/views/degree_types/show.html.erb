@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @degree_type %>
+
+<div>
+  <%= link_to "Edit this degree type", edit_degree_type_path(@degree_type) %> |
+  <%= link_to "Back to degree types", degree_types_path %>
+
+  <%= button_to "Destroy this degree type", @degree_type, method: :delete %>
+</div>

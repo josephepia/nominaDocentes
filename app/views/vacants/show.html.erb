@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @vacant %>
+
+<div>
+  <%= link_to "Edit this vacant", edit_vacant_path(@vacant) %> |
+  <%= link_to "Back to vacants", vacants_path %>
+
+  <%= button_to "Destroy this vacant", @vacant, method: :delete %>
+</div>

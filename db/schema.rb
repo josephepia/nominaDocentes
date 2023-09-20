@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_19_214926) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_20_001645) do
   create_table "actions", force: :cascade do |t|
     t.string "nombre"
     t.text "descripcion"
@@ -39,6 +39,46 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_19_214926) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "aspiring_teaching_categories", force: :cascade do |t|
+    t.string "descripcion"
+    t.integer "puntaje"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contracted_teaching_categories", force: :cascade do |t|
+    t.string "descripcion"
+    t.float "salario"
+    t.boolean "tiempoCompleto"
+    t.boolean "medioTiempo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "degree_types", force: :cascade do |t|
+    t.string "descripcion"
+    t.integer "puntaje"
+    t.integer "nivel"
+    t.float "bono"
+    t.boolean "posgrado"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "experiences", force: :cascade do |t|
+    t.string "descripcion"
+    t.integer "puntaje"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "fees", force: :cascade do |t|
+    t.string "descripcion"
+    t.float "valor"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "patent_types", force: :cascade do |t|
     t.string "descripcion"
     t.integer "puntaje"
@@ -60,6 +100,22 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_19_214926) do
     t.index ["role_id", "permission_id"], name: "index_permissions_roles_on_role_id_and_permission_id"
   end
 
+  create_table "research_types", force: :cascade do |t|
+    t.string "nivel"
+    t.integer "puntaje"
+    t.float "bono"
+    t.boolean "semillero"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "researcher_categories", force: :cascade do |t|
+    t.string "descripcion"
+    t.integer "puntaje"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "resources", force: :cascade do |t|
     t.string "nombre"
     t.text "descripcion"
@@ -74,4 +130,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_19_214926) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "vacants", force: :cascade do |t|
+    t.integer "cantidad"
+    t.integer "area_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["area_id"], name: "index_vacants_on_area_id"
+  end
+
+  add_foreign_key "vacants", "areas"
 end
