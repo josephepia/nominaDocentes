@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_20_001645) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_20_003544) do
   create_table "actions", force: :cascade do |t|
     t.string "nombre"
     t.text "descripcion"
@@ -128,6 +128,26 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_20_001645) do
     t.text "descripcion"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "nombre"
+    t.string "identificacion"
+    t.integer "aspiringTeachingCategory_id"
+    t.integer "contractedTeachingCategory_id"
+    t.integer "researcherCategory_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["aspiringTeachingCategory_id"], name: "index_users_on_aspiringTeachingCategory_id"
+    t.index ["contractedTeachingCategory_id"], name: "index_users_on_contractedTeachingCategory_id"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["researcherCategory_id"], name: "index_users_on_researcherCategory_id"
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   create_table "vacants", force: :cascade do |t|

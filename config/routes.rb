@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  resources :payrolls
+  resources :authorizations
+  resources :requests
+  resources :research_groups
+  resources :contracts
+  resources :user_experiences
+  resources :patents
+  resources :profiles
+  resources :degrees
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
   resources :degree_types
   resources :vacants
   resources :research_types

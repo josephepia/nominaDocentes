@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>User experiences</h1>
+
+<div id="user_experiences">
+  <% @user_experiences.each do |user_experience| %>
+    <%= render user_experience %>
+    <p>
+      <%= link_to "Show this user experience", user_experience %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New user experience", new_user_experience_path %>

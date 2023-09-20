@@ -1,0 +1,37 @@
+<%= form_with(model: degree) do |form| %>
+  <% if degree.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(degree.errors.count, "error") %> prohibited this degree from being saved:</h2>
+
+      <ul>
+        <% degree.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nombre, style: "display: block" %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div>
+    <%= form.label :descripcion, style: "display: block" %>
+    <%= form.text_area :descripcion %>
+  </div>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :degreetype_id, style: "display: block" %>
+    <%= form.text_field :degreetype_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

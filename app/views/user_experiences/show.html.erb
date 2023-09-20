@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @user_experience %>
+
+<div>
+  <%= link_to "Edit this user experience", edit_user_experience_path(@user_experience) %> |
+  <%= link_to "Back to user experiences", user_experiences_path %>
+
+  <%= button_to "Destroy this user experience", @user_experience, method: :delete %>
+</div>

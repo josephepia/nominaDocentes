@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  estado: MyString
+  vacant: one
+  user: one
+
+two:
+  estado: MyString
+  vacant: two
+  user: two

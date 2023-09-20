@@ -1,0 +1,82 @@
+<%= form_with(model: payroll) do |form| %>
+  <% if payroll.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(payroll.errors.count, "error") %> prohibited this payroll from being saved:</h2>
+
+      <ul>
+        <% payroll.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :sueldoBase, style: "display: block" %>
+    <%= form.text_field :sueldoBase %>
+  </div>
+
+  <div>
+    <%= form.label :bonificacionTotal, style: "display: block" %>
+    <%= form.text_field :bonificacionTotal %>
+  </div>
+
+  <div>
+    <%= form.label :valorHorasTrabajadas, style: "display: block" %>
+    <%= form.text_field :valorHorasTrabajadas %>
+  </div>
+
+  <div>
+    <%= form.label :horasTrabajadas, style: "display: block" %>
+    <%= form.number_field :horasTrabajadas %>
+  </div>
+
+  <div>
+    <%= form.label :sueldoTotal, style: "display: block" %>
+    <%= form.text_field :sueldoTotal %>
+  </div>
+
+  <div>
+    <%= form.label :horasRestante, style: "display: block" %>
+    <%= form.number_field :horasRestante %>
+  </div>
+
+  <div>
+    <%= form.label :horasPorTrabajar, style: "display: block" %>
+    <%= form.number_field :horasPorTrabajar %>
+  </div>
+
+  <div>
+    <%= form.label :valorHorasRestantes, style: "display: block" %>
+    <%= form.text_field :valorHorasRestantes %>
+  </div>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :degrretype_id, style: "display: block" %>
+    <%= form.text_field :degrretype_id %>
+  </div>
+
+  <div>
+    <%= form.label :researchtype_id, style: "display: block" %>
+    <%= form.text_field :researchtype_id %>
+  </div>
+
+  <div>
+    <%= form.label :fee_id, style: "display: block" %>
+    <%= form.text_field :fee_id %>
+  </div>
+
+  <div>
+    <%= form.label :contract_id, style: "display: block" %>
+    <%= form.text_field :contract_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

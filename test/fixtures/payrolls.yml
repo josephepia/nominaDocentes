@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sueldoBase: 1.5
+  bonificacionTotal: 1.5
+  valorHorasTrabajadas: 1.5
+  horasTrabajadas: 1
+  sueldoTotal: 1.5
+  horasRestante: 1
+  horasPorTrabajar: 1
+  valorHorasRestantes: 1.5
+  user: one
+  degrretype: one
+  researchtype: one
+  fee: one
+  contract: one
+
+two:
+  sueldoBase: 1.5
+  bonificacionTotal: 1.5
+  valorHorasTrabajadas: 1.5
+  horasTrabajadas: 1
+  sueldoTotal: 1.5
+  horasRestante: 1
+  horasPorTrabajar: 1
+  valorHorasRestantes: 1.5
+  user: two
+  degrretype: two
+  researchtype: two
+  fee: two
+  contract: two

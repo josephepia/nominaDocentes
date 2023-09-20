@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Research groups</h1>
+
+<div id="research_groups">
+  <% @research_groups.each do |research_group| %>
+    <%= render research_group %>
+    <p>
+      <%= link_to "Show this research group", research_group %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New research group", new_research_group_path %>

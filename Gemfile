@@ -45,6 +45,9 @@ gem "bootsnap", require: false
 #gema para autenticacion
 gem "devise"
 
+#agrega la esructura de base de datos en el modelo 
+gem "annotate"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

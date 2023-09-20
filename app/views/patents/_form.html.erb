@@ -1,0 +1,32 @@
+<%= form_with(model: patent) do |form| %>
+  <% if patent.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(patent.errors.count, "error") %> prohibited this patent from being saved:</h2>
+
+      <ul>
+        <% patent.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nombre, style: "display: block" %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div>
+    <%= form.label :patenttype_id, style: "display: block" %>
+    <%= form.text_field :patenttype_id %>
+  </div>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

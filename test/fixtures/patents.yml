@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  patenttype: one
+  user: one
+
+two:
+  nombre: MyString
+  patenttype: two
+  user: two
