@@ -9,79 +9,59 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-
-            
   </head>
-  
-  
   <body>
-  
-
-  
-  <nav>
-          <div class="nav-wrapper">
-           
-            <a href="" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
-
-            <% if (user_signed_in? and user.is_teacher) %>
-            <%else%>
-            <a href="" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <% end %>
-            <a href="/" class="brand-logo center"><%= image_tag "https://img.freepik.com/free-vector/modern-hand-drawn-education-concept_23-2147906438.jpg?w=826&t=st=1695239858~exp=1695240458~hmac=e8177150738e3dd1a35fde628789d0bad34d3bd0baab5e9a72961847830b4c6f", class: "circle logo-img" %></a>
-
-            <ul class="right hide-on-med-and-down negro-text">
-
-              <%if user_signed_in?%>
-
-
-              <li>
-                <a  class="dropdown-trigger no-autoinit logo-img " data-target='dropdown1'>
-                  <div class="row middle-xs no-margin">
-                    <div class="col-xs no-margin">
-                      <p class="no-margin"><%=user.nombre%></p>
-                    </div>
-                    <div class="col-xs no-margin">
-                      <%= image_tag "https://img.freepik.com/free-vector/modern-hand-drawn-education-concept_23-2147906438.jpg?w=826&t=st=1695239858~exp=1695240458~hmac=e8177150738e3dd1a35fde628789d0bad34d3bd0baab5e9a72961847830b4c6f", class: "circle avatar-img" %>
-                    </div>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+        <% if (user_signed_in? and user.is_teacher) %>
+        <%else%>
+          <a href="" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <% end %>
+        <a href="/" class="brand-logo center"><%= image_tag "https://img.freepik.com/free-vector/modern-hand-drawn-education-concept_23-2147906438.jpg?w=826&t=st=1695239858~exp=1695240458~hmac=e8177150738e3dd1a35fde628789d0bad34d3bd0baab5e9a72961847830b4c6f", class: "circle logo-img" %></a>
+        <ul class="right hide-on-med-and-down negro-text">
+          <%if user_signed_in?%>
+            <li>
+              <a  class="dropdown-trigger no-autoinit logo-img " data-target='dropdown1'>
+                <div class="row middle-xs no-margin">
+                  <div class="col-xs no-margin">
+                    <p class="no-margin"><%=user.nombre%></p>
                   </div>
-                </a>
-              </li>
-
-
-
-              <%else%>
-              <li><%= link_to "Iniciar",new_user_session_path ,class: "btn waves-light margen-boton borde-radio-5"%></li>
-              <li><%= link_to "Registrarme",new_user_registration_path ,class: "btn waves-light margen-boton borde-radio-5"%></li>
-              <%end%>
-            </ul>
-          </div>
-   </nav>
-
-  <ul id="slide-out" class="sidenav">
-    <li><div class="user-view">
-      <div class="background">
-        <img src="images/office.jpg">
+                  <div class="col-xs no-margin">
+                    <%= image_tag "https://img.freepik.com/free-vector/modern-hand-drawn-education-concept_23-2147906438.jpg?w=826&t=st=1695239858~exp=1695240458~hmac=e8177150738e3dd1a35fde628789d0bad34d3bd0baab5e9a72961847830b4c6f", class: "circle avatar-img" %>
+                  </div>
+                </div>
+              </a>
+            </li>
+          <%else%>
+            <li><%= link_to "Iniciar",new_user_session_path ,class: "btn waves-light margen-boton borde-radio-5"%></li>
+            <li><%= link_to "Registrarme",new_user_registration_path ,class: "btn waves-light margen-boton borde-radio-5"%></li>
+          <%end%>
+        </ul>
       </div>
-      <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
-      <a href="#name"><span class="white-text name">John Doe</span></a>
-      <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </nav>
+    <ul id="slide-out" class="sidenav">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img src="images/office.jpg">
+          </div>
+          <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
+          <a href="#name"><span class="white-text name">John Doe</span></a>
+          <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+        </div>
+      </li>
+      <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+      <li><a href="#!">Second Link</a></li>
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li><a class="subheader">Subheader</a></li>
+      <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+    <div class="container">
+      <%= yield %>
     </div>
-    </li>
-    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-    <li><a href="#!">Second Link</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-  </ul>
-  
-
-  <div class="container">
-       <%= yield %>
-  </div>
- 
-        
-        <li><%=link_to "Cerrar sesion", destroy_user_session_path, data: { turbo_method: :delete } ,class: "green-text" %></li>
-
-
+    <li><%=link_to "Cerrar sesion", destroy_user_session_path, data: { turbo_method: :delete } ,class: "green-text" %></li>
   </body>
 </html>
