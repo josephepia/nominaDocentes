@@ -113,6 +113,7 @@ GEM
     flexbox_rb (0.2.7.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    htmlbeautifier (1.4.2)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.2.1)
@@ -262,6 +263,7 @@ DEPENDENCIES
   debug
   devise
   flexbox_rb
+  htmlbeautifier
   importmap-rails
   jbuilder
   jquery-rails

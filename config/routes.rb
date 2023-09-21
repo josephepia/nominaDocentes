@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'main/home'
   resources :payrolls
   resources :authorizations
   resources :requests

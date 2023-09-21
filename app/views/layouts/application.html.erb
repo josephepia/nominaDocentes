@@ -20,8 +20,10 @@
   
   <nav>
           <div class="nav-wrapper">
-            <% if (user_signed_in? and user.is_teacher) %>
+           
             <a href="" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+
+            <% if (user_signed_in? and user.is_teacher) %>
             <%else%>
             <a href="" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <% end %>
@@ -71,9 +73,13 @@
     <li><a class="subheader">Subheader</a></li>
     <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
   </ul>
-  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  
+
+  <div class="container">
+       <%= yield %>
+  </div>
  
-        <%= yield %>
+        
         <li><%=link_to "Cerrar sesion", destroy_user_session_path, data: { turbo_method: :delete } ,class: "green-text" %></li>
 
 
