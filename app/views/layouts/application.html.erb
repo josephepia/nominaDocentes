@@ -10,14 +10,15 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
 
+            
   </head>
   
   
   <body>
   
-  <nav> 
+
   
-  <nav class="white-text ">
+  <nav>
           <div class="nav-wrapper">
             <% if (user_signed_in? and user.is_teacher) %>
             <a href="" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
@@ -35,10 +36,10 @@
                 <a  class="dropdown-trigger no-autoinit logo-img " data-target='dropdown1'>
                   <div class="row middle-xs no-margin">
                     <div class="col-xs no-margin">
-                      <p class="no-margin"><%=user.primerNombre%></p>
+                      <p class="no-margin"><%=user.nombre%></p>
                     </div>
                     <div class="col-xs no-margin">
-                      <%= image_tag "avatar.png", class: "circle avatar-img" %>
+                      <%= image_tag "https://img.freepik.com/free-vector/modern-hand-drawn-education-concept_23-2147906438.jpg?w=826&t=st=1695239858~exp=1695240458~hmac=e8177150738e3dd1a35fde628789d0bad34d3bd0baab5e9a72961847830b4c6f", class: "circle avatar-img" %>
                     </div>
                   </div>
                 </a>
@@ -71,9 +72,10 @@
     <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
   </ul>
   <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-  <div class="container">
-    <%= yield %>
+ 
+        <%= yield %>
+        <li><%=link_to "Cerrar sesion", destroy_user_session_path, data: { turbo_method: :delete } ,class: "green-text" %></li>
 
-  </div>
+
   </body>
 </html>
