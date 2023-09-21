@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'main/home'
   resources :payrolls
   resources :authorizations
   resources :requests
@@ -30,4 +31,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  root "main#home"
 end

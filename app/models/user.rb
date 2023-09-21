@@ -32,6 +32,10 @@ class User < ApplicationRecord
 
   belongs_to :aspiringTeachingCategory, optional: true
   belongs_to :contractedTeachingCategory,optional: true
-  belongs_to :researcherCategory,optional: true
+  belongs_to :researcherCategory, optional: true
+
+  #relaciones con roles
+  has_and_belongs_to_many :roles
+
 
 end

@@ -1,0 +1,11 @@
+{
+  "name": "nominaDocentes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/josephepia/nominaDocentes.git",
+  "author": "Joseph Epiayu Fernandez <remixlebo@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}
