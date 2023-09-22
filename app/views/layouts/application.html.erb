@@ -34,34 +34,34 @@
               </a>
             </li>
           <%else%>
-            <li><%= link_to "Iniciar",new_user_session_path ,class: "btn waves-light margen-boton borde-radio-5"%></li>
-            <li><%= link_to "Registrarme",new_user_registration_path ,class: "btn waves-light margen-boton borde-radio-5"%></li>
+            <li><%= link_to "Iniciar",new_user_session_path ,class: "btn waves-light margen-boton borde-radio-10 z-depth-0"%></li>
+            <li><%= link_to "Registrarme",new_user_registration_path ,class: "btn waves-light margen-boton borde-radio-10 z-depth-0"%></li>
           <%end%>
         </ul>
       </div>
     </nav>
     <ul id="slide-out" class="sidenav">
-      <li>
-        <div class="user-view">
-          <div class="background">
-            <img src="images/office.jpg">
-          </div>
-          <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
-          <a href="#name"><span class="white-text name">John Doe</span></a>
-          <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
-        </div>
-      </li>
-      <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-      <li><a href="#!">Second Link</a></li>
+      <div class="padding-vertical-50">
+        <li><%=link_to "Contratos", contracts_path,class: "waves-effect" %></li>
+        <li><%=link_to "Solicitudes de contratación", requests_path,class: "waves-effect" %></li>
+        <li><%=link_to "Nomina", payrolls_path,class: "waves-effect" %></li>
+      </div>
       <li>
         <div class="divider"></div>
       </li>
-      <li><a class="subheader">Subheader</a></li>
-      <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+      <li><a class="subheader">Configiración</a></li>
+      <li><%=link_to "Areas", areas_path,class: "waves-effect" %></li>
+      <li><%=link_to "Vacantes", vacants_path,class: "waves-effect" %></li>
+      <li><%=link_to "Tipos de titulos", degree_types_path,class: "waves-effect" %></li>
+      <li><%=link_to "Experienia calificada", experiences_path,class: "waves-effect" %></li>
+      <li><%=link_to "Tipos de grupos de investigación", research_types_path,class: "waves-effect" %></li>
+      <li><%=link_to "Categorias como investigador", researcher_categories_path,class: "waves-effect" %></li>
+      <li><%=link_to "Tipos de publicaciones y patentes", patent_types_path,class: "waves-effect" %></li>
+      <li><%=link_to "Categorias docente aspirante", aspiring_teaching_categories_path,class: "waves-effect" %></li>
+      <li><%=link_to "Categorias docente contratado", contracted_teaching_categories_path,class: "waves-effect" %></li>
     </ul>
     <div class="container">
       <%= yield %>
     </div>
-    <li><%=link_to "Cerrar sesion", destroy_user_session_path, data: { turbo_method: :delete } ,class: "green-text" %></li>
   </body>
 </html>

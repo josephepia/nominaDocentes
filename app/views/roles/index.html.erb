@@ -1,7 +1,10 @@
 <p style="color: green"><%= notice %></p>
-
 <h1>Roles</h1>
-
+<div class="row start-xs">
+  <% @roles.each do |role| %>
+    <%= render role %>
+  <% end %>
+</div>
 <div id="roles">
   <% @roles.each do |role| %>
     <%= render role %>
@@ -10,5 +13,4 @@
     </p>
   <% end %>
 </div>
-
 <%= link_to "New role", new_role_path %>
